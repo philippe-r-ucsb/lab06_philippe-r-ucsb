@@ -97,8 +97,8 @@ int copyOddOnly(int *dest, int *src, int n) {
   int copied = 0;
   for (int i = 0; i < n; i++) {
     int toBeCopied = src[i];
-    if (toBeCopied % 2 == 1) {
-      dest[i] = toBeCopied;
+    if (toBeCopied % 2) {
+      dest[copied] = toBeCopied;
       copied += 1;
     }
   }
